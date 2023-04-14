@@ -1,3 +1,5 @@
+import * as AppStore from './store/2-app.reducer';
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,7 +15,7 @@ import { StoreModule } from '@ngrx/store';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    StoreModule.forRoot({}),
+    StoreModule.forRoot({ app: AppStore.reducer }),
   ],
   providers: [],
   bootstrap: [AppComponent],
